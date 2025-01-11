@@ -1,11 +1,95 @@
-/* Опишите в этом файле все keyframes для проекта и стили анимаций иконки Like.
+.like-icon {
+    height: inherit;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    width: inherit;
+    fill: var(--contour-color);
+    position: relative;
+    z-index: 1;
+}
 
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
+.like-icon .heart {
+    transform-origin: center center;
+}
 
-*/
+.like-icon .contour {
+    fill: var(--contour-color);
+    transition: fill .1s linear;
+}
+
+.like-icon.is-liked .contour {
+    fill: var(--heart-color);
+    transition: fill .3s linear .06s;
+}
+
+.like-icon .main-body {
+    fill: var(--page-background);
+    transition: fill .3s linear;
+}
+
+.like-icon:hover .main-body {
+    fill: var(--contour-color);
+}
+
+.like-icon:active .main-body,
+.like-icon:hover .main-body {
+    transition: fill .3s linear .05s
+}
+
+.like-icon:active .main-body {
+    fill: var(--heart-color);
+}
+
+.like-icon.is-liked .main-body {
+    transition-delay: fill .3s .05s linear;
+    fill: var(--heart-color);
+}
+
+.like-icon .core {
+    transition: fill .3s linear .03s;
+    fill: transparent;
+}
+
+.like-icon:hover .core {
+    transition: fill .3s linear;
+    fill: var(--contour-color);
+}
+
+.like-icon.is-liked .core,
+.like-icon:active .core {
+    transition: fill .3s linear;
+    fill: var(--heart-color);
+}
+
+.like-icon.is-liked {
+    animation: scale-animation .3s ease-in .1s 1 alternate;
+}
+
+.like-icon.is-liked .heart {
+    animation: scale-animation .3s ease-in .1s 1 alternate;
+}
+
+.like-icon.is-liked .sparks {
+    animation: sparks-animation .3s ease-in .3s 1 alternate;
+}
+
+@keyframes scale-animation {
+    0% {
+        scale: 1;
+    }
+
+    to {
+        scale: 1.15;
+    }
+}
+
+@keyframes sparks-animation {
+    0% {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

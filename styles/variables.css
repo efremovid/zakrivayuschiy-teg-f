@@ -1,1 +1,20 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+    --accent-font: "PressStart";
+    --accent-font-weight: 400;
+    --main-font: "Inter";
+    --heading-font-weight: 700;
+    --text-font-weight: 400 785;
+    --main-font-size: 18px;
+    --line-height-text: 21px;
+    --font-size-like: 14px;
+    --label-stroke-color: #FFFFFF;
+    --contour-color: #000;
+    --heart-color: red;
+    --btn-bg-color: #FFFFFF;
+    --bg-dialog: #000000;
+    --page-background: #fff;
+    --background-color: #d3d3d3;
+    --background-color-start: #e7e7e7;
+    --background-color-end: #1a1a1a;
+    --main-border: 2px solid #000;
+}
