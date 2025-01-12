@@ -13,8 +13,8 @@
 
 .header {
   inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
-  padding-top: 128px;
-  padding-bottom: 128px;
+  padding-top: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
+  padding-bottom: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
   background-color: var(--page-background);
   margin: 100px;
   border: var(--main-border);
@@ -125,8 +125,8 @@
   font-family: var(--accent-font);
   font-size: var(--font-size-like);
   text-shadow: -1px 0 var(--label-stroke-color), 0 1px var(--label-stroke-color), 1px 0 var(--label-stroke-color), 0 -1px var(--label-stroke-color);
-  right: 27px;
-  top: 27px;
+  right: clamp(0.8125rem, 0.5044rem + 1.3146vw, 1.6875rem);
+  top: clamp(1.5625rem, 1.5185rem + 0.1878vw, 1.6875rem);
   opacity: 0.5;
   z-index: 1;
 }
@@ -302,15 +302,6 @@
 }
 
 @media (width <=375px) {
-  .header {
-    padding: 120px 14px;
-  }
-
-  .label {
-    right: 13px;
-    top: 25px;
-  }
-
   .save-button {
     flex-direction: column;
     padding: 15px 20px;
